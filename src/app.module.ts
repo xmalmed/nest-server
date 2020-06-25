@@ -5,6 +5,7 @@ import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 // import { Connection } from 'typeorm';
+import { EventsModule } from './events/events.module';
 
 @Module({
     imports: [
@@ -15,7 +16,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
             synchronize: true, // should be false to have better control over db structure
         }),
         AuthModule,
-        UsersModule
+        UsersModule,
+        EventsModule
     ],
     controllers: [AppController],
     providers: [AppService],
